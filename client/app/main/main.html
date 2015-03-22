@@ -1,0 +1,8 @@
+<ui-gmap-google-map center="map.center" zoom="map.zoom"></ui-gmap-google-map>
+<a href="new">Add interview</a>
+<ul class="list">
+  <li id="{{interview._id}}" class="interview" ng-repeat="interview in interviews | orderBy: 'date_created':true">
+    <a class="title" href="/interview/{{interview._id}}">{{interview.client}}</a>
+    <a href="#" ng-click="delete(interview._id)">Delete</a>
+  </li>
+</ul>

@@ -1,0 +1,101 @@
+2015-02-27T00:08:47.219383+00:00 app[web.1]: npm ERR! There is likely additional logging output above.
+2015-02-27T00:08:47.196273+00:00 app[web.1]:     at module.exports (/app/server/config/express.js:31:13)
+2015-02-27T00:08:47.219237+00:00 app[web.1]: npm ERR!     npm owner ls snippets
+2015-02-27T00:08:47.222150+00:00 app[web.1]: 
+2015-02-27T00:08:47.222456+00:00 app[web.1]: npm ERR! Please include the following file with any support request:
+2015-02-27T00:08:47.222704+00:00 app[web.1]: npm ERR!     /app/npm-debug.log
+2015-02-27T00:08:47.218390+00:00 app[web.1]: npm ERR! Failed at the snippets@0.0.0 start script 'node server/app.js'.
+2015-02-27T00:08:47.955718+00:00 heroku[web.1]: Process exited with status 1
+2015-02-27T00:08:47.962648+00:00 heroku[web.1]: State changed from starting to crashed
+2015-02-27T01:48:55.428566+00:00 heroku[web.1]: State changed from crashed to starting
+2015-02-27T01:48:57.772678+00:00 heroku[web.1]: Starting process with command `npm start`
+2015-02-27T01:48:59.436379+00:00 app[web.1]: Detected 512 MB available memory, 512 MB limit per process (WEB_MEMORY)
+2015-02-27T01:48:59.436404+00:00 app[web.1]: Recommending WEB_CONCURRENCY=1
+2015-02-27T01:49:00.166963+00:00 app[web.1]: > snippets@0.0.0 start /app
+2015-02-27T01:49:00.166955+00:00 app[web.1]: 
+2015-02-27T01:49:00.166966+00:00 app[web.1]: 
+2015-02-27T01:49:00.166965+00:00 app[web.1]: > node server/app.js
+2015-02-27T01:49:00.867793+00:00 app[web.1]: npm ERR! snippets@0.0.0 start: `node server/app.js`
+2015-02-27T01:49:00.868100+00:00 app[web.1]: npm ERR! 
+2015-02-27T01:49:00.868650+00:00 app[web.1]: npm ERR! not with npm itself.
+2015-02-27T01:49:00.874028+00:00 app[web.1]: npm ERR!     /app/npm-debug.log
+2015-02-27T01:49:00.841930+00:00 app[web.1]:     at Function.Module.runMain (module.js:501:10)
+2015-02-27T01:49:00.867928+00:00 app[web.1]: npm ERR! Exit status 1
+2015-02-27T01:49:00.868455+00:00 app[web.1]: npm ERR! This is most likely a problem with the snippets package,
+2015-02-27T01:49:00.869342+00:00 app[web.1]: npm ERR!     npm owner ls snippets
+2015-02-27T01:49:00.865646+00:00 app[web.1]: npm ERR! Linux 3.13.0-40-generic
+2015-02-27T01:49:00.867590+00:00 app[web.1]: npm ERR! code ELIFECYCLE
+2015-02-27T01:49:00.868763+00:00 app[web.1]: npm ERR! Tell the author that this fails on your system:
+2015-02-27T01:49:00.868899+00:00 app[web.1]: npm ERR!     node server/app.js
+2015-02-27T01:49:00.868256+00:00 app[web.1]: npm ERR! Failed at the snippets@0.0.0 start script 'node server/app.js'.
+2015-02-27T01:49:00.869527+00:00 app[web.1]: npm ERR! There is likely additional logging output above.
+2015-02-27T01:49:00.869119+00:00 app[web.1]: npm ERR! You can get their info via:
+2015-02-27T01:49:00.873366+00:00 app[web.1]: 
+2015-02-27T01:49:00.873824+00:00 app[web.1]: npm ERR! Please include the following file with any support request:
+2015-02-27T01:49:00.841913+00:00 app[web.1]: Error: ENOENT, no such file or directory '/app/public/favicon.ico'
+2015-02-27T01:49:00.841917+00:00 app[web.1]:     at Object.fs.statSync (fs.js:801:18)
+2015-02-27T01:49:00.841921+00:00 app[web.1]:     at module.exports (/app/server/config/express.js:31:13)
+2015-02-27T01:49:00.841929+00:00 app[web.1]:     at Function.Module._load (module.js:310:12)
+2015-02-27T01:49:00.859506+00:00 app[web.1]: 
+2015-02-27T01:49:00.867077+00:00 app[web.1]: npm ERR! npm  v2.5.1
+2015-02-27T01:49:00.841912+00:00 app[web.1]: 
+2015-02-27T01:49:00.841927+00:00 app[web.1]:     at Module.load (module.js:355:32)
+2015-02-27T01:49:00.841905+00:00 app[web.1]: fs.js:0
+2015-02-27T01:49:00.841924+00:00 app[web.1]:     at Module._compile (module.js:460:26)
+2015-02-27T01:49:00.841926+00:00 app[web.1]:     at Object.Module._extensions..js (module.js:478:10)
+2015-02-27T01:49:00.866227+00:00 app[web.1]: npm ERR! argv "/app/.heroku/node/bin/node" "/app/.heroku/node/bin/npm" "start"
+2015-02-27T01:49:00.841910+00:00 app[web.1]: (function (exports, require, module, __filename, __dirname) { // Copyright Joy
+2015-02-27T01:49:00.841923+00:00 app[web.1]:     at Object.<anonymous> (/app/server/app.js:23:28)
+2015-02-27T01:49:00.841916+00:00 app[web.1]:     at Error (native)
+2015-02-27T01:49:00.841919+00:00 app[web.1]:     at favicon (/app/node_modules/serve-favicon/index.js:47:15)
+2015-02-27T01:49:00.866461+00:00 app[web.1]: npm ERR! node v0.12.0
+2015-02-27T01:49:01.729822+00:00 heroku[web.1]: Process exited with status 1
+2015-02-27T01:49:01.750310+00:00 heroku[web.1]: State changed from starting to crashed
+2015-02-27T04:46:08.152130+00:00 heroku[web.1]: State changed from crashed to starting
+2015-02-27T04:46:10.119794+00:00 heroku[web.1]: Starting process with command `npm start`
+2015-02-27T04:46:11.667244+00:00 app[web.1]: Detected 512 MB available memory, 512 MB limit per process (WEB_MEMORY)
+2015-02-27T04:46:11.667283+00:00 app[web.1]: Recommending WEB_CONCURRENCY=1
+2015-02-27T04:46:12.285097+00:00 app[web.1]: 
+2015-02-27T04:46:12.285105+00:00 app[web.1]: > snippets@0.0.0 start /app
+2015-02-27T04:46:12.285107+00:00 app[web.1]: > node server/app.js
+2015-02-27T04:46:12.285109+00:00 app[web.1]: 
+2015-02-27T04:46:13.004242+00:00 app[web.1]: fs.js:0
+2015-02-27T04:46:13.004265+00:00 app[web.1]:     at module.exports (/app/server/config/express.js:31:13)
+2015-02-27T04:46:13.004255+00:00 app[web.1]: Error: ENOENT, no such file or directory '/app/public/favicon.ico'
+2015-02-27T04:46:13.004269+00:00 app[web.1]:     at Module._compile (module.js:460:26)
+2015-02-27T04:46:13.004252+00:00 app[web.1]: 
+2015-02-27T04:46:13.004250+00:00 app[web.1]: (function (exports, require, module, __filename, __dirname) { // Copyright Joy
+2015-02-27T04:46:13.004257+00:00 app[web.1]:     at Error (native)
+2015-02-27T04:46:13.004271+00:00 app[web.1]:     at Object.Module._extensions..js (module.js:478:10)
+2015-02-27T04:46:13.004267+00:00 app[web.1]:     at Object.<anonymous> (/app/server/app.js:23:28)
+2015-02-27T04:46:13.004263+00:00 app[web.1]:     at favicon (/app/node_modules/serve-favicon/index.js:47:15)
+2015-02-27T04:46:13.004260+00:00 app[web.1]:     at Object.fs.statSync (fs.js:801:18)
+2015-02-27T04:46:13.004273+00:00 app[web.1]:     at Module.load (module.js:355:32)
+2015-02-27T04:46:13.035390+00:00 app[web.1]: npm ERR! node v0.12.0
+2015-02-27T04:46:13.035039+00:00 app[web.1]: npm ERR! argv "/app/.heroku/node/bin/node" "/app/.heroku/node/bin/npm" "start"
+2015-02-27T04:46:13.025887+00:00 app[web.1]: 
+2015-02-27T04:46:13.004275+00:00 app[web.1]:     at Function.Module._load (module.js:310:12)
+2015-02-27T04:46:13.036511+00:00 app[web.1]: npm ERR! snippets@0.0.0 start: `node server/app.js`
+2015-02-27T04:46:13.043578+00:00 app[web.1]: 
+2015-02-27T04:46:13.004277+00:00 app[web.1]:     at Function.Module.runMain (module.js:501:10)
+2015-02-27T04:46:13.037053+00:00 app[web.1]: npm ERR! 
+2015-02-27T04:46:13.038617+00:00 app[web.1]: npm ERR! not with npm itself.
+2015-02-27T04:46:13.036759+00:00 app[web.1]: npm ERR! Exit status 1
+2015-02-27T04:46:13.037272+00:00 app[web.1]: npm ERR! Failed at the snippets@0.0.0 start script 'node server/app.js'.
+2015-02-27T04:46:13.039261+00:00 app[web.1]: npm ERR! You can get their info via:
+2015-02-27T04:46:13.038863+00:00 app[web.1]: npm ERR! Tell the author that this fails on your system:
+2015-02-27T04:46:13.039684+00:00 app[web.1]: npm ERR! There is likely additional logging output above.
+2015-02-27T04:46:13.036276+00:00 app[web.1]: npm ERR! code ELIFECYCLE
+2015-02-27T04:46:13.039496+00:00 app[web.1]: npm ERR!     npm owner ls snippets
+2015-02-27T04:46:13.035972+00:00 app[web.1]: npm ERR! npm  v2.5.1
+2015-02-27T04:46:13.039048+00:00 app[web.1]: npm ERR!     node server/app.js
+2015-02-27T04:46:13.038118+00:00 app[web.1]: npm ERR! This is most likely a problem with the snippets package,
+2015-02-27T04:46:13.034350+00:00 app[web.1]: npm ERR! Linux 3.13.0-40-generic
+2015-02-27T04:46:13.043871+00:00 app[web.1]: npm ERR! Please include the following file with any support request:
+2015-02-27T04:46:13.044040+00:00 app[web.1]: npm ERR!     /app/npm-debug.log
+2015-02-27T04:46:13.904736+00:00 heroku[web.1]: Process exited with status 1
+2015-02-27T04:46:13.937461+00:00 heroku[web.1]: State changed from starting to crashed
+2015-02-27T21:14:24.612080+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=danhems-snippets.herokuapp.com request_id=ab18d099-bb20-47da-bed7-5c0481e6592a fwd="78.146.97.193" dyno= connect= service= status=503 bytes=
+2015-02-27T21:14:26.063497+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=danhems-snippets.herokuapp.com request_id=f191a052-4d44-4110-8068-86dc29dade60 fwd="78.146.97.193" dyno= connect= service= status=503 bytes=
+2015-02-27T21:14:44.947834+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=danhems-snippets.herokuapp.com request_id=aecdb2a7-081e-4097-b4fb-aaa9575c4d89 fwd="78.146.97.193" dyno= connect= service= status=503 bytes=
+2015-02-27T21:14:46.577576+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=danhems-snippets.herokuapp.com request_id=e17fab18-d964-4cf3-b599-01fd57b57c43 fwd="78.146.97.193" dyno= connect= service= status=503 bytes=

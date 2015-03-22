@@ -1,0 +1,17 @@
+<div class="container" ng-controller="NewCtrl">
+	<div class="form-new">
+	  <form class="form" ng-submit="save()" ng-show="!isSubmitted">
+	    <h1>Add interview</h1>
+	    <input id="client" ng-model="interview.client" placeholder="Client" type="text">
+	    <input id="location" ng-model="interview.location" placeholder="Location">
+	    <input id="salary" ng-model="interview.salary" placeholder="salary">
+	    <input id="recruiter" ng-model="interview.recruiter" placeholder="recruiter">
+	    <input type="submit" value="Add">
+	  </form>
+	  <div ng-show="submissionSuccess">
+	  	<p>Interview added</p>
+	  	<a href="#" ng-click="resetForm()">Add another?</a>
+	  	<a href="/">Return</a>
+	  </div>
+	</div>
+</div>
