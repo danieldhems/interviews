@@ -31,9 +31,7 @@ angular.module('Interviews')
     };
 
     $scope.resetForm = function(){
-
-
       $scope.isSubmitted = false;
       $scope.submissionSuccess = false;
     }
-  });
+  })

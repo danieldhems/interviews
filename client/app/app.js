@@ -6,7 +6,10 @@ angular.module('Interviews', [
   'ngSanitize',
   'ngRoute',
   'ui.bootstrap',
-  'uiGmapgoogle-maps'
+  'uiGmapgoogle-maps',
+  'geocoder',
+  'ngStorage',
+  'ngAutocomplete'
 ])
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider
@@ -21,6 +24,6 @@ angular.module('Interviews', [
       uiGmapGoogleMapApiProvider.configure({
           key: 'AIzaSyC0ojvwjVe4Ly7fDvzygU719J_vbrdFsMc',
           v: '3.17',
-          libraries: 'weather,geometry,visualization'
+          libraries: 'places,weather,geometry,visualization'
       });
-  });
+  })
