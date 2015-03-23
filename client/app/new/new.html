@@ -3,9 +3,9 @@
 	  <form class="form" ng-submit="save()" ng-show="!isSubmitted">
 	    <h1>Add interview</h1>
 	    <input id="client" ng-model="interview.client" placeholder="Client" type="text">
-	    <input id="location" ng-model="interview.location" placeholder="Location" ng-autocomplete>
-	    <input id="salary" ng-model="interview.salary" placeholder="salary">
-	    <input id="recruiter" ng-model="interview.recruiter" placeholder="recruiter">
+	    <input id="address" ng-model="interview.address" placeholder="address" type="text" ng-autocomplete options="{watchEnter:true}">
+	    <input id="salary" ng-model="interview.salary" placeholder="salary" type="text">
+	    <input id="recruiter" ng-model="interview.recruiter" placeholder="recruiter" type="text">
 	    <input type="submit" value="Add">
 	  </form>
 	  <div ng-show="submissionSuccess">

@@ -8,7 +8,8 @@ var FileSchema = new mongoose.Schema({
 
 var InterviewSchema = new mongoose.Schema({
 	client: String,
-	location: String,
+	location: Object,
+	address: String,
 	recruiter: String,
 	salary: String,
 	files: [FileSchema],

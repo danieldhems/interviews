@@ -14,8 +14,18 @@ angular.module('Interviews')
         latitude: '51.5056',
         longitude: '0.0756'
       },
-      zoom: 14
+      zoom: 16
     };
+
+    // Helper object required by google-map directive to gain control of it
+    $scope.control = {};
+
+    $scope.centerMap = function(location){
+      $scope.control.refresh({
+        latitude: location.lat,
+        longitude: location.lng
+      });
+    }
 
     $scope.prependinterview = function(interview){
       $scope.interviews.unshift(interview);
