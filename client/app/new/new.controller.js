@@ -13,30 +13,35 @@ angular.module('Interviews')
 
     $scope.save = function(){
 
-      geocoder.geocodeAddress( '42 Redchurch Street London E2 7DP' ) 
+      geocoder.geocodeAddress( $scope.interview.address ) 
       .then( function(data){
         $scope.interview.location = {
           lat: data.lat,
           lng: data.lng
-        }
+        };
+        
+        // console.log( $scope.interview.location );
+
+        $scope.interview.dateCreated = new Date();
+
+        $scope.isSubmitted = true;
+        
+        // send to server
+        //*
+        $http.post('/api/interviews', $scope.interview)
+          .success( function(response){
+            if(response){
+              $scope.submissionSuccess = true;
+              console.log(response);
+            }
+          })
+          .error( function(err){
+            $scope.submissionError = true;
+            console.log(err);
+          });
+        //*/
       });
 
-      $scope.interview.dateCreated = new Date();
-
-      $scope.isSubmitted = true;
-      
-      // send to server
-      $http.post('/api/interviews', $scope.interview)
-        .success( function(response){
-          if(response){
-            $scope.submissionSuccess = true;
-            console.log(response);
-          }
-        })
-        .error( function(err){
-          $scope.submissionError = true;
-          console.log(err);
-        });
     };
 
     $scope.resetForm = function(){
