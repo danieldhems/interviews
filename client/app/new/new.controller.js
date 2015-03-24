@@ -16,15 +16,17 @@ angular.module('Interviews')
 
     $scope.save = function(){
 
-      $scope.interview.location = {
-        lat: $scope.placeData.geometry.location.k,
-        lng: $scope.placeData.geometry.location.D
-      };
+      if($scope.placeData.hasOwnProperty('geometry')){
+        $scope.interview.location = {
+          lat: $scope.placeData.geometry.location.k,
+          lng: $scope.placeData.geometry.location.D
+        };
+      }
 
       $scope.interview.dateCreated = new Date();
 
       $scope.isSubmitted = true;
-      
+
       $http.post('/api/interviews', $scope.interview)
         .success( function(response){
           if(response){

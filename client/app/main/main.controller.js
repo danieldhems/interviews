@@ -14,13 +14,17 @@ angular.module('Interviews')
         latitude: '51.5056',
         longitude: '0.0756'
       },
-      zoom: 16
+      zoom: 12
     };
 
     // Helper object required by google-map directive to gain control of it
     $scope.control = {};
 
     $scope.centerMap = function(location){
+      // iIf latlng coords are not available, return
+      // this handles the case when an interview is added but an address isn't provided
+      if(location === undefined) return;
+
       $scope.control.refresh({
         latitude: location.lat,
         longitude: location.lng

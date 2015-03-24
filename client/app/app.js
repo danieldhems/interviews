@@ -9,7 +9,8 @@ angular.module('Interviews', [
   'uiGmapgoogle-maps',
   'geocoder',
   'ngStorage',
-  'ngAutocomplete'
+  'ngAutocomplete',
+  'xeditable'
 ])
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider

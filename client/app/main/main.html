@@ -1,11 +1,14 @@
 <ui-gmap-google-map center="map.center" zoom="map.zoom" control="control">
-	<ui-gmap-marker coords="currentInterviewCoords" idKey="1"></ui-gmap-marker>
+	<ui-gmap-markers models="interviews" coords="'location'" idKey="'client'"></ui-gmap-markers>
 </ui-gmap-google-map>
 <a href="new">Add interview</a>
 <ul class="list">
   <li id="{{interview._id}}" class="interview" ng-repeat="interview in interviews track by $index | orderBy: 'date_created':true">
-    <a class="title" href="/interview/{{interview._id}}">{{interview.client}}</a>
+    <h2 class="title" editable-text="interview.client">{{interview.client}}</h2>
+    <p>{{interview.recruiter}} / {{interview.salary}}</p>
+    <a href="/interview/{{interview._id}}">View more</a>
     <a href="#" ng-click="centerMap( interview.location )">Show on map</a>
+    <a href="/interview/{{interview._id}}/edit">edit</a>
     <a href="#" ng-click="delete(interview._id)">Delete</a>
   </li>
 </ul>
