@@ -25,6 +25,10 @@ angular.module('Interviews')
         latitude: location.lat,
         longitude: location.lng
       });
+      $scope.currentInterviewCoords = {
+        latitude: location.lat,
+        longitude: location.lng
+      };
     }
 
     $scope.prependinterview = function(interview){
