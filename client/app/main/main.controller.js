@@ -7,16 +7,17 @@ angular.module('Interviews')
     $http.get('/api/interviews', $scope.newinterview)
       .success( function(response){
         $scope.updateResults(response);
-        console.log(response);
       });
 
-    $scope.map = {
+    $scope.mapDefaultSettings = {
       center: {
-        latitude: '51.5056',
-        longitude: '0.0756'
+        latitude: '51.510830',
+        longitude: '-0.076132'
       },
-      zoom: 12
+      zoom: 13
     };
+
+    $scope.map = $scope.mapDefaultSettings;
 
     // Helper object required by google-map directive to gain control of it
     $scope.control = {};
@@ -26,14 +27,22 @@ angular.module('Interviews')
       // this handles the case when an interview is added but an address isn't provided
       if(location === undefined) return;
 
+      // angular maps method for centering the map
       $scope.control.refresh({
-        latitude: location.lat,
-        longitude: location.lng
+        latitude: location.latitude,
+        longitude: location.longitude
       });
+      $scope.map.zoom = 14;
+
+      // can't rememebr what this is for...
       $scope.currentInterviewCoords = {
         latitude: location.lat,
         longitude: location.lng
       };
+    };
+
+    $scope.resetMap = function(){
+      $scope.map = $scope.mapDefaultSettings;
     }
 
     $scope.prependinterview = function(interview){

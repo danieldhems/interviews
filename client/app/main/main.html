@@ -1,7 +1,8 @@
 <ui-gmap-google-map center="map.center" zoom="map.zoom" control="control">
-	<ui-gmap-markers models="interviews" coords="'location'" idKey="'client'" icon="'icon'"></ui-gmap-markers>
+	<ui-gmap-markers models="interviews" coords="'location'" idKey="'client'" icon="'icon'" labelContent="'client'" fit="true"></ui-gmap-markers>
 </ui-gmap-google-map>
 <a href="new">Add interview</a>
+<a href="#" ng-click="resetMap()">Overview</a>
 <ul class="list">
   <li id="{{interview._id}}" class="interview" ng-repeat="interview in interviews track by $index | orderBy: 'date_created':true">
     <h2 class="title">{{interview.client}}</h2>
