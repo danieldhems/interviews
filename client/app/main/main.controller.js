@@ -7,6 +7,7 @@ angular.module('Interviews')
     $http.get('/api/interviews', $scope.newinterview)
       .success( function(response){
         $scope.updateResults(response);
+        console.log(response);
       });
 
     $scope.map = {

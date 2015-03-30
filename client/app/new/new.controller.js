@@ -18,8 +18,8 @@ angular.module('Interviews')
 
       if($scope.placeData.hasOwnProperty('geometry')){
         $scope.interview.location = {
-          lat: $scope.placeData.geometry.location.k,
-          lng: $scope.placeData.geometry.location.D
+          latitude: $scope.placeData.geometry.location.k,
+          longitude: $scope.placeData.geometry.location.D
         };
       }
 
