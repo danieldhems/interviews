@@ -5,10 +5,7 @@
 module.exports = {
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://ds039321.mongolab.com:39321/heroku_app35447905'
-    user: 'admin',
-    password: 'Cat090219882'
+    uri: 'mongodb://localhost/interviews'
   },
-
   seedDB: false
 };
