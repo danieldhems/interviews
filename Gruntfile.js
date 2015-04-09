@@ -393,12 +393,6 @@ module.exports = function (grunt) {
           remote: 'heroku',
           branch: 'master'
         }
-      },
-      openshift: {
-        options: {
-          remote: 'openshift',
-          branch: 'master'
-        }
       }
     },
 
@@ -589,7 +583,7 @@ module.exports = function (grunt) {
       'autoprefixer',
       'express:dev',
       'wait',
-      'open',
+      // 'open',
       'watch'
     ]);
   });
@@ -641,7 +635,7 @@ module.exports = function (grunt) {
     ]);
   });
 
-  grunt.registerTask('heroku:production', [
+  grunt.registerTask('heroku:test', [
     'clean:dist',
     'injector:sass', 
     'concurrent:dist',
