@@ -31,7 +31,7 @@ module.exports = function (grunt) {
     yeoman: {
       // configurable paths
       client: require('./bower.json').appPath || 'client',
-      dist: 'public'
+      dist: 'dist'
     },
     express: {
       options: {
@@ -311,7 +311,7 @@ module.exports = function (grunt) {
     ngtemplates: {
       options: {
         // This should be the name of your apps angular module
-        module: 'angularFullstackApp',
+        module: 'Interviews',
         htmlmin: {
           collapseBooleanAttributes: true,
           collapseWhitespace: true,
